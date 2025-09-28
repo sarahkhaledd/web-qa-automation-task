@@ -1,4 +1,5 @@
 # web-qa-automation-task
-[![CircleCI](https://circleci.com/gh/sarahkhaledd/web-qa-automation-task.svg?style=shield)](https://circleci.com/gh/sarahkhaledd/web-qa-automation-task)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/sarahkhaledd/web-qa-automation-task/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/sarahkhaledd/web-qa-automation-task/tree/main)
+
 
 
