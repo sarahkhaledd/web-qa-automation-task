@@ -1,0 +1,4 @@
+nightwatch@^3.12.2
+chromedriver@^140.0.4
+nightwatch-html-reporter@^2.0.6
+mochawesome@^7.1.4
