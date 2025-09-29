@@ -9,7 +9,8 @@ describe('Homepage Search Tests', function() {
   
     after(browser => browser.end());
   
-    it.skip("Search for 'dress' should return only relevant products - KNOWN BUG", function() {
+    // Known bug: Search results include irrelevant products
+    it.skip("HP01 - Search for 'dress' should return only relevant products - KNOWN BUG", function() {
       home.searchForProduct('dress');
       
       home.assertSearchResultsLoaded();
@@ -19,7 +20,7 @@ describe('Homepage Search Tests', function() {
       home.checkSearchRelevance('Dress');
     });
     
-    it('Search term should persist in URL after page refresh', function(browser) {
+    it('HP02 - Search term should persist in URL after page refresh', function(browser) {
       home.searchForProduct('dress');
       home.assertUrlContains('dress');
       home.api.refresh();
@@ -27,12 +28,12 @@ describe('Homepage Search Tests', function() {
     });
     
   
-    it("Search for 'dress' should update URL with search term", function() {
+    it("HP03 - Search for 'dress' should update URL with search term", function() {
       home.searchForProduct('dress');
       home.assertUrlContains('dress');
     });  
   
-    it('Search for non-existent product should show no results', function() {
+    it('HP04 - Search for non-existent product should show no results', function() {
       home.searchForProduct('nonexistentproduct123');
       
       home.assertSearchResultsLoaded();
@@ -40,13 +41,13 @@ describe('Homepage Search Tests', function() {
       home.assertNoProductCards();
     });
   
-    it('Search for empty term should remain on homepage', function() {
+    it('HP05 - Search for empty term should remain on homepage', function() {
       home.searchForProduct('');
       
       home.assertSearchInputVisible();
     });
   
-    it('Search with XSS payload should be sanitized', function() {
+    it('HP06 - Search with XSS payload should be sanitized', function() {
       const xssPayload = '<script>alert("XSS")</script>';
       home.searchForProduct(xssPayload);
   

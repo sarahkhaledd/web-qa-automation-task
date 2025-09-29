@@ -11,7 +11,7 @@ describe('Contact Us Form Tests', function() {
 
   after(browser => browser.end());
 
-  it('Complete submission form with all fields should be accepted', function() {
+  it('CU01 - Complete submission form with all fields should be accepted', function() {
     contact.fillForm(
       SUBJECTS.CUSTOMER_SERVICE,
       'user@example.com',
@@ -23,7 +23,7 @@ describe('Contact Us Form Tests', function() {
     contact.assertSuccessMessage();
   });
 
-  it('Missing subject heading should show error', function() {
+  it('CU02 - Missing subject heading should show error', function() {
     contact.fillForm(
       null,
       'user@example.com',
@@ -35,7 +35,7 @@ describe('Contact Us Form Tests', function() {
     contact.assertNoSubjectError();
   });
 
-  it('Missing email should show error', function() {
+  it('CU03 - Missing email should show error', function() {
     contact.fillForm(
       SUBJECTS.CUSTOMER_SERVICE,
       null,
@@ -47,7 +47,7 @@ describe('Contact Us Form Tests', function() {
     contact.assertInvalidEmailError();
   });
 
-  it('Invalid email format should show error', function() {
+  it('CU04 - Invalid email format should show error', function() {
     contact.fillForm(
       SUBJECTS.WEBMASTER,
       'invalid-email',
@@ -59,7 +59,7 @@ describe('Contact Us Form Tests', function() {
     contact.assertInvalidEmailError();
   });
 
-  it('Blank message should show error', function() {
+  it('CU05 - Blank message should show error', function() {
     contact.fillForm(
       SUBJECTS.CUSTOMER_SERVICE,
       'user@example.com',
@@ -71,7 +71,8 @@ describe('Contact Us Form Tests', function() {
     contact.assertBlankMessageError();
   });
 
-  it.skip('should not accept message with only spaces - KNOWN BUG', function() {
+  // Known bug: Form accepts messages with only spaces
+  it.skip('CU06 - should not accept message with only spaces - KNOWN BUG', function() {
     contact.fillForm(
         SUBJECTS.CUSTOMER_SERVICE,
         'user@example.com',
@@ -83,7 +84,7 @@ describe('Contact Us Form Tests', function() {
     contact.assertBlankMessageError();  
   });
 
-  it('Empty order reference should be accepted', function() {
+  it('CU07 - Empty order reference should be accepted', function() {
     contact.fillForm(
       SUBJECTS.CUSTOMER_SERVICE,
       'user@example.com',
@@ -95,7 +96,7 @@ describe('Contact Us Form Tests', function() {
     contact.assertSuccessMessage();
   });
 
-  it('File upload should be accepted', function() {
+  it('CU08 -  File upload should be accepted', function() {
     contact.fillForm(
       SUBJECTS.WEBMASTER,
       'user@example.com',

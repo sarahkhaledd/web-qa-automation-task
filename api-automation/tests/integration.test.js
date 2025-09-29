@@ -13,7 +13,7 @@ describe('Integration Tests - End-to-End Flows', () => {
   });
 
   describe('Complete User Lifecycle', () => {
-    it('should successfully complete full user lifecycle: create -> login -> get -> update -> delete', async () => {
+    it('E2E01 - should successfully complete full user lifecycle: create -> login -> get -> update -> delete', async () => {
       try {
         const createRes = await endpoints.createUser(lifecycleUser.name, lifecycleUser.email, lifecycleUser.password);
         console.log('CREATE USER RESPONSE:', createRes.status, createRes.body);
@@ -59,7 +59,7 @@ describe('Integration Tests - End-to-End Flows', () => {
   
 
   describe('Token Refresh After Update', () => {
-    it('should demonstrate token refresh requirement after user update operation', async () => {
+    it('E2E02 - should demonstrate token refresh requirement after user update operation', async () => {
       const createRes = await endpoints.createUser(tokenTestUser.name, tokenTestUser.email, tokenTestUser.password);
       assertStatusCode(createRes, 200);
       assertMessage(createRes, 'User registered with success');
@@ -90,7 +90,7 @@ describe('Integration Tests - End-to-End Flows', () => {
   });
 
   describe('Cleanup Operations', () => {
-    it('should successfully clean up all users using admin delete all endpoint', async () => {
+    it('E2E03 - should successfully clean up all users using admin delete all endpoint', async () => {
       const res = await endpoints.deleteAllUsers();
       assertStatusCode(res, 200);
       assertMessage(res, 'Users deleted with success');
