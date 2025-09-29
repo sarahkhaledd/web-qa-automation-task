@@ -13,6 +13,7 @@ This project showcases a complete testing solution covering:
 - **REST API Testing** with Jest and Supertest
 - **End-to-End UI Testing** with Nightwatch.js  
 - **Comprehensive Bug Reporting** with detailed documentation
+- **Test Cases Documentation** with all test cases details
 - **CI/CD Integration** with CircleCI
 - **HTML Test Reports** for both API and UI tests
 
@@ -22,7 +23,7 @@ This project showcases a complete testing solution covering:
 web-qa-automation-task/
 ├── api-automation/          # REST API Testing Suite
 ├── nightwatch-project/      # E2E UI Testing Suite
-├── documentation/           # Project Documentation
+├── documentation/           # TC and Bugs Documentation
 ├── bug-reporting.md        # Comprehensive Bug Report
 └── .circleci/              # CI/CD Configuration
 ```
