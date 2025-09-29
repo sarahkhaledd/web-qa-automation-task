@@ -45,7 +45,7 @@ cd api-automation && npm install && npm run dev && npm test
 cd ../nightwatch-project && npm install && npm test
 
 #Set custom URLs for CI
-API_BASE_URL=http://localhost:3000 WEB_BASE_URL=http://automationpractice.multiformis.com
+API_BASE_URL=http://localhost:3000 WEB_BASE_URL=http://automationpractice.multiformis.com ADMIN_KEY=keyadmin123
 ```
 
 ## 📋 Detailed Documentation
