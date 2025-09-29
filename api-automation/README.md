@@ -20,10 +20,9 @@ See `requirements.txt` for detailed dependency information.
 
 ## 🚀 Quick Start
 
-### 1. Installation
 ```bash
-npm install
-```
+# Install and run tests
+npm install && npm run dev && npm test
 
 ### 2. Environment Setup
 Create a `.env` file in the project root:
@@ -36,6 +35,10 @@ ADMIN_KEY=your-admin-key-here
 ```bash
 #Run the server
 npm run dev
+
+# Export the api base url
+API_BASE_URL=http://localhost:3000 
+ADMIN_KEY=keyadmin123
 
 # Run all tests
 npm test

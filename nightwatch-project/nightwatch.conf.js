@@ -1,7 +1,13 @@
+const { WEB_BASE_URL } = require('./config/env');
+
 module.exports = {
     src_folders: ['tests'],
     page_objects_path: 'page-objects',
     output_folder: 'tests_output',
+  
+    globals: {
+      baseUrl: WEB_BASE_URL
+    },
   
     test_settings: {
       default: {

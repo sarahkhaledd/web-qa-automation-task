@@ -3,7 +3,9 @@ const SUBJECTS = require('../test-data/subjects');
 const assert = require('../helpers/assertionHelper');
 
 module.exports = {
-  url: 'http://automationpractice.multiformis.com/index.php?controller=contact',
+  url: function() {
+    return this.api.globals.baseUrl + '/index.php?controller=contact';
+  },
   elements: {
     subjectHeading: 'select[name="id_contact"]',
     emailField: '#email',

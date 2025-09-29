@@ -35,23 +35,16 @@ nightwatch-project/
 - Chrome browser (for default configuration)
 - Safari browser (optional, for Safari testing)
 
-### Installation
+### Installation & Run
 
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-   cd nightwatch-project
-   ```
+```bash
+# Export the web base url
+WEB_BASE_URL=http://automationpractice.multiformis.com 
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+# Install and run tests
+npm install && npm test
 
-3. **Verify installation:**
-   ```bash
-   npx nightwatch --help
-   ```
+```
 
 ## 📦 Dependencies
 

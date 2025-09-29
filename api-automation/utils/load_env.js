@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
-const ADMIN_KEY = process.env.ADMIN_KEY || 'keyadmin123';
+const API_BASE_URL = process.env.API_BASE_URL;
+const ADMIN_KEY = process.env.ADMIN_KEY;
 
-module.exports = { BASE_URL, ADMIN_KEY };
+module.exports = { API_BASE_URL, ADMIN_KEY };

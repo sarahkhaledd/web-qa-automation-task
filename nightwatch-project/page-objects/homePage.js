@@ -1,7 +1,9 @@
 const assert = require('../helpers/assertionHelper');
 
 module.exports = {
-  url: 'http://automationpractice.multiformis.com/',
+  url: function() {
+    return this.api.globals.baseUrl + '/';
+  },
   
   elements: {
     searchInput: '#search_query_top',

@@ -1,7 +1,7 @@
 const supertest = require('supertest');
-const { BASE_URL } = require('../utils/load_env');
+const { API_BASE_URL } = require('../utils/load_env');
 
-const request = supertest(BASE_URL);
+const request = supertest(API_BASE_URL);
 
 async function sendGet(path, token) {
   const req = request.get(path);
