@@ -75,7 +75,7 @@ cd ../nightwatch-project && npm install && npm test
 - **High**: 6 bugs (Input validation failures)  
 - **Medium**: 6 bugs (UI and search issues)
 
-📋 **Full Details**: [Bug Reporting Document](bug-reporting.md)
+📋 **Full Details**: [Bug Reporting Document](https://github.com/sarahkhaledd/web-qa-automation-task/blob/main/documentation/Bugs.md)
 
 ## 🔄 CI/CD Integration
 
