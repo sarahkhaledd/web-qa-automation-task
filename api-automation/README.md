@@ -34,6 +34,9 @@ ADMIN_KEY=your-admin-key-here
 
 ### 3. Run Tests
 ```bash
+#Run the server
+npm run dev
+
 # Run all tests
 npm test
 
