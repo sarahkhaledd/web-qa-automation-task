@@ -10,7 +10,7 @@ describe('Homepage Search Tests', function() {
     after(browser => browser.end());
   
     // Known bug: Search results include irrelevant products
-    it.skip("HP01 - Search for 'dress' should return only relevant products - KNOWN BUG", function() {
+    it("HP01 - Search for 'dress' should return only relevant products - KNOWN BUG", function() {
       home.searchForProduct('dress');
       
       home.assertSearchResultsLoaded();

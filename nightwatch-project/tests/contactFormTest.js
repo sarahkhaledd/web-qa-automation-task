@@ -72,7 +72,7 @@ describe('Contact Us Form Tests', function() {
   });
 
   // Known bug: Form accepts messages with only spaces
-  it.skip('CU06 - should not accept message with only spaces - KNOWN BUG', function() {
+  it('CU06 - should not accept message with only spaces - KNOWN BUG', function() {
     contact.fillForm(
         SUBJECTS.CUSTOMER_SERVICE,
         'user@example.com',

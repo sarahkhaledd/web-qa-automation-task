@@ -48,27 +48,27 @@ describe('Users CRUD API Tests', () => {
     });
 
     // Skipping this test due to known API defect where empty body validation is not working    
-    it.skip('PATCH03 - should return 400 when update request body is empty', async () => {
+    it('PATCH03 - should return 400 when update request body is empty', async () => {
       const res = await endpoints.patchUser(token, {});
       assertStatusCode(res, 400);
     });
 
     // Skipping this test due to known API defect where email format validation is not working
-    it.skip('PATCH04 - should return 400 when update email format is invalid - KNOWN BUG: Email validation not working', async () => {
+    it('PATCH04 - should return 400 when update email format is invalid - KNOWN BUG: Email validation not working', async () => {
       const invalidUpdate = { ...newUser, email: 'invalid-email' };
       const res = await endpoints.patchUser(token, invalidUpdate);
       assertStatusCode(res, 400);
     });
 
     // Skipping this test due to known API defect where duplicate email validation is not working
-    it.skip('PATCH05 - should return 400 when update email already exists - KNOWN BUG: Duplicate email validation not working', async () => {
+    it('PATCH05 - should return 400 when update email already exists - KNOWN BUG: Duplicate email validation not working', async () => {
       const duplicateUpdate = { ...newUser, email: user.email };
       const res = await endpoints.patchUser(token, duplicateUpdate);
       assertStatusCode(res, 400);
     });
 
     // Skipping this test due to known API defect where empty field validation is not working
-    it.skip('PATCH06 - should return 400 when update fields are empty - KNOWN BUG: Empty field validation not working', async () => {
+    it('PATCH06 - should return 400 when update fields are empty - KNOWN BUG: Empty field validation not working', async () => {
       const res = await endpoints.patchUser(token, "");
       assertStatusCode(res, 400);
     });
