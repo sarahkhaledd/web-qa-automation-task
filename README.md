@@ -38,14 +38,14 @@ web-qa-automation-task/
 git clone https://github.com/sarahkhaledd/web-qa-automation-task.git
 cd web-qa-automation-task
 
+#Set custom URLs for CI
+API_BASE_URL=http://localhost:3000 WEB_BASE_URL=http://automationpractice.multiformis.com ADMIN_KEY=keyadmin123
+
 # API Tests
 cd api-automation && npm install && npm run dev && npm test
 
 # UI Tests  
 cd ../nightwatch-project && npm install && npm test
-
-#Set custom URLs for CI
-API_BASE_URL=http://localhost:3000 WEB_BASE_URL=http://automationpractice.multiformis.com ADMIN_KEY=keyadmin123
 ```
 
 ## 📋 Detailed Documentation
