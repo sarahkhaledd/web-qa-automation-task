@@ -13,6 +13,7 @@ This project showcases a complete testing solution covering:
 - **REST API Testing** with Jest and Supertest
 - **End-to-End UI Testing** with Nightwatch.js  
 - **Comprehensive Bug Reporting** with detailed documentation
+- **Test Cases Documentation** with all test cases details
 - **CI/CD Integration** with CircleCI
 - **HTML Test Reports** for both API and UI tests
 
@@ -22,7 +23,7 @@ This project showcases a complete testing solution covering:
 web-qa-automation-task/
 ├── api-automation/          # REST API Testing Suite
 ├── nightwatch-project/      # E2E UI Testing Suite
-├── documentation/           # Project Documentation
+├── documentation/           # TC and Bugs Documentation
 ├── bug-reporting.md        # Comprehensive Bug Report
 └── .circleci/              # CI/CD Configuration
 ```
@@ -38,14 +39,14 @@ web-qa-automation-task/
 git clone https://github.com/sarahkhaledd/web-qa-automation-task.git
 cd web-qa-automation-task
 
+#Set custom URLs for CI
+API_BASE_URL=http://localhost:3000 WEB_BASE_URL=http://automationpractice.multiformis.com ADMIN_KEY=keyadmin123
+
 # API Tests
 cd api-automation && npm install && npm run dev && npm test
 
 # UI Tests  
 cd ../nightwatch-project && npm install && npm test
-
-#Set custom URLs for CI
-API_BASE_URL=http://localhost:3000 WEB_BASE_URL=http://automationpractice.multiformis.com
 ```
 
 ## 📋 Detailed Documentation
