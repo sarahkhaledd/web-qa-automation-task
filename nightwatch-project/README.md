@@ -6,12 +6,15 @@ A comprehensive end-to-end testing suite built with Nightwatch.js for automated 
 
 ```
 nightwatch-project/
+├── config/                     # Environment configuration
+│   ├── env.js                 # Environment variables management
+│   └── README.md              # Configuration documentation
 ├── helpers/                    # Utility functions and helpers
 │   ├── assertionHelper.js     # Custom assertion methods
 │   └── fileHelper.js          # File handling utilities
 ├── html-reporter.js           # HTML report configuration
 ├── logs/                      # Test execution logs
-├── nightwatch.conf.js         # Nightwatch configuration
+├── nightwatch.conf.js         # Nightwatch configuration with env support
 ├── page-objects/              # Page Object Model implementations
 │   ├── contactPage.js         # Contact form page object
 │   └── homePage.js            # Homepage search page object
@@ -19,10 +22,14 @@ nightwatch-project/
 │   ├── subjects.js            # Contact form subject options
 │   └── test-file.txt          # Sample file for upload tests
 ├── tests/                     # Test specifications
-│   ├── contactFormTest.js     # Contact form validation tests
-│   └── searchTest.js          # Search functionality tests
+│   ├── contactFormTest.js     # Contact form validation tests (8 scenarios)
+│   └── searchTest.js          # Search functionality tests (6 scenarios)
 ├── tests_output/              # Generated test reports and results
+│   ├── nightwatch-html-report/ # HTML test reports
+│   └── report.html            # Main test report
 ├── package.json               # Node.js dependencies and scripts
+├── package-lock.json          # Dependency lock file
+├── requirements.txt           # Project requirements
 └── README.md                  # This file
 ```
 

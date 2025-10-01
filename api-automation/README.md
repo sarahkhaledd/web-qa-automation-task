@@ -69,24 +69,28 @@ The HTML report includes:
 
 ```
 api-automation/
-├── tests/                    # Test files
-│   ├── auth.test.js         # Authentication tests
-│   ├── users.test.js        # User CRUD tests
-│   ├── admin.test.js        # Admin operations tests
-│   └── integration.test.js  # End-to-end tests
-├── helpers/                  # Test utilities
-│   ├── assertions.js        # Custom assertions
-│   ├── base_requests.js     # HTTP request helpers
-│   └── endpoints.js         # API endpoint functions
-├── testData/                # Test data
-│   └── credentials.js       # User credentials
-├── utils/                   # Utilities
-│   └── data_generator.js    # Random data generation
-├── constants/               # Constants
-│   └── routes.js           # API routes
-├── reports/                # Test reports
-│   └── api-test-report.html # HTML test report
-└── requirements.txt        # Dependencies list
+├── constants/                  # API constants and configuration
+│   └── routes.js              # API route definitions
+├── helpers/                   # Test utilities and helper functions
+│   ├── assertions.js          # Custom assertion methods
+│   ├── base_requests.js       # HTTP request wrapper functions
+│   └── endpoints.js           # API endpoint abstraction layer
+├── reports/                   # Generated test reports
+│   └── api-test-report.html   # HTML test execution report
+├── testData/                  # Test data and fixtures
+│   └── credentials.js         # User credentials for testing
+├── tests/                     # Test specifications (35 scenarios)
+│   ├── admin.test.js          # Admin operations tests (6 scenarios)
+│   ├── auth.test.js           # Authentication tests (13 scenarios)
+│   ├── integration.test.js    # End-to-end workflow tests (3 scenarios)
+│   └── users.test.js          # User CRUD tests (12 scenarios)
+├── utils/                     # Utility functions
+│   ├── data_generator.js      # Random test data generation
+│   └── load_env.js            # Environment variable management
+├── jest.config.js             # Jest testing framework configuration
+├── package.json               # Node.js dependencies and scripts
+├── package-lock.json          # Dependency lock file
+└── README.md                  # This file
 ```
 
 ## 🧪 Test Categories
